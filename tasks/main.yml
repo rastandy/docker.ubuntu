@@ -37,6 +37,7 @@
   apt:
     name: "{{ docker_pkg_name }}"
     state: "{{ 'latest' if update_docker_package else 'present' }}"
+    force: "{{ docker_apt_force }}"
     update_cache: yes
     cache_valid_time: "{{ docker_apt_cache_valid_time }}"
 
